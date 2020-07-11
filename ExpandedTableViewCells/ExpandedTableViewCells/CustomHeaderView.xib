@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CustomHeaderView" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomHeaderView" id="MFo-L7-IZf" customClass="CustomHeaderView" customModule="ExpandedTableViewCells" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MFo-L7-IZf" id="9aJ-Zi-VoJ">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhK-cZ-DUu">
+                        <rect key="frame" x="20" y="12" width="374" height="21"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBm-Op-fhc">
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="44"/>
+                        <state key="normal" image="chevron.down" catalog="system"/>
+                        <connections>
+                            <action selector="tapHeaderWithSender:" destination="MFo-L7-IZf" eventType="touchUpInside" id="TiJ-Hm-TzW"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ZBm-Op-fhc" secondAttribute="bottom" id="0CM-oI-vqu"/>
+                    <constraint firstItem="ZBm-Op-fhc" firstAttribute="top" secondItem="9aJ-Zi-VoJ" secondAttribute="top" id="6Na-sS-D3m"/>
+                    <constraint firstItem="XhK-cZ-DUu" firstAttribute="top" secondItem="9aJ-Zi-VoJ" secondAttribute="top" constant="12" id="9ge-QA-rkw"/>
+                    <constraint firstAttribute="trailing" secondItem="XhK-cZ-DUu" secondAttribute="trailing" constant="20" symbolic="YES" id="D8O-gK-v2w"/>
+                    <constraint firstItem="ZBm-Op-fhc" firstAttribute="leading" secondItem="9aJ-Zi-VoJ" secondAttribute="leading" id="GhP-Dn-0om"/>
+                    <constraint firstItem="XhK-cZ-DUu" firstAttribute="leading" secondItem="9aJ-Zi-VoJ" secondAttribute="leading" constant="20" id="XNf-rv-G5o"/>
+                    <constraint firstAttribute="bottom" secondItem="XhK-cZ-DUu" secondAttribute="bottom" constant="11" id="kLJ-3C-jdd"/>
+                    <constraint firstAttribute="trailing" secondItem="ZBm-Op-fhc" secondAttribute="trailing" constant="20" id="nxU-n4-4dp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headerButton" destination="ZBm-Op-fhc" id="bIu-Ub-ib8"/>
+                <outlet property="titleLabel" destination="XhK-cZ-DUu" id="K8S-Mt-bC6"/>
+            </connections>
+            <point key="canvasLocation" x="-165.21739130434784" y="-137.27678571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+    </resources>
+</document>
